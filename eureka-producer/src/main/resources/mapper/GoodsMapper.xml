@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eurekaproducer.home.mapper.GoodsMapper">
+
+    <select id="getGoods" resultType="com.eurekaproducer.home.dto.GoodsDTO">
+        SELECT id,goods_name as goodsName ,goods_num as goodsNum, sales_num as salesNum
+         FROM shop_goods WHERE  goods_name like #{goodsName}
+    </select>
+
+
+</mapper>
